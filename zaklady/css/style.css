@@ -3,7 +3,7 @@ body {
     font-size: 12pt;
     color: #222;
     line-height: 120%;
-    background-color: #EEA044;
+    background-color: #EDBB80;
     counter-reset: h2;
     
 }
@@ -49,7 +49,7 @@ p {
 }
 
 #obsah {
-    background-color: #E3B175;
+    background-color: #EEA044;
 }
 
 header {
@@ -58,3 +58,39 @@ header {
     padding: 2em 0;
     text-align: center;
 }
+
+/*Navigace*/
+.navbar {
+    background-color: #ddd;
+}
+
+.navbar ul{
+    display: flex;
+}
+/*Zobrazení pro mobily*/
+@media only screen and (max-width: 600px) {
+    .navbar ul{
+        display: block;
+    }
+  }
+
+  .navbar ul li a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border: 1px solid white;
+  }
+
+  .navbar ul li a:hover {
+    /*text-decoration: underline;*/
+    color: white;
+    background-color: black; 
+  }
+
+  .navbar .dropdown {
+      position: absolute;
+      right: 10px;
+      top: 7px;
+  }

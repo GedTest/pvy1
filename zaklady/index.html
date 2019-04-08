@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8">
-    <title>Základy HTML 5</title>
-    <meta name="description" content="Přehled nejčastěji používaných značek jazyka HTML 5">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/resetcss.css"></link>
-    <link rel="stylesheet" href="css/style.css"></link>
-  </head>
-  <body>
-    <div class="navbar">
-        <nav>
-            <ul>
-              <li><a href="#znacky">Značky</a></li>
-              <li><a href="#seznamy">Seznamy</a></li>
-              <li><a href="#tabulky">Tabulky</a></li>
-              <li><a href="#clanky">Články</a></li>
-              <li><a href="#nahrazovane-elementy">Nahrazované elementy</a></li>
-            </ul>
-          </nav>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Základy HTML 5</title>
+  <meta name="description" content="Přehled nejčastěji používaných značek jazyka HTML 5">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/resetcss.css"></link>
+  <link rel="stylesheet" href="css/style.css"></link>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="dropdown" style="font-size: 40px">
+        <i class="fas fa-bars"></i>
     </div>
-    <header>
-      <h1 class="text-red">Základy jazyka HTML 5</h1>
-      <p id="podtitul">Nejčastěji používané značky a jejich význam</p>
-    </header>
-    <div class="container" id="obsah">
-      <main>
-        <section id="znacky">
-          <h2>Značky pro úpravu textu</h2>
-          <h3>Inline elementy</h3>
-          <p>
-            Inline elementy jsou vkládány do blokových elementů (kontejnerů),
-            protože obvykle ohraničují jen kratší úsek textu. Univerzálním
-            inline elementem je značka &lt;span&gt;, která se používá na těch
-            místech, kde je potřeba změny formátování.
-          </p>
-          <h4>Příklady inline elementů</h4>
-          <p>
-            <b>Bold text (tučný text)</b>, <i>italic text (kurzíva)</i>,
-            <strong>important text (důležité pojmy)</strong>,
-            <em>emphasized text (zdůrazněný text)</em>,
-            <small>smaller text (zmenšený text)</small>,
-            <mark>marked or highlighted text (označený, zvýrazněný text)</mark>,
-            <ins>inserted text (vložený text)</ins>,
-            <del>deleted text (smazaný text)</del>, dolní index:
-            H<sub>2</sub>SO<sub>4</sub>, horní index: 2<sup>10</sup> = 1024,
-            proměnné: Einstein wrote: <var>E</var> = <var>m</var><var>c</var
+    <nav class="container">
+      <ul>
+        <li><a href="#znacky">Značky</a></li>
+        <li><a href="#seznamy">Seznamy</a></li>
+        <li><a href="#tabulky">Tabulky</a></li>
+        <li><a href="#clanky">Články</a></li>
+        <li><a href="#nahrazovane-elementy">Nahrazované elementy</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header>
+    <h1 class="text-red">Základy jazyka HTML 5</h1>
+    <p id="podtitul">Nejčastěji používané značky a jejich význam</p>
+  </header>
+  <div class="container" id="obsah">
+    <main>
+      <section id="znacky">
+        <h2>Značky pro úpravu textu</h2>
+        <h3>Inline elementy</h3>
+        <p>
+          Inline elementy jsou vkládány do blokových elementů (kontejnerů), protože obvykle ohraničují jen kratší úsek textu. Univerzálním
+          inline elementem je značka &lt;span&gt;, která se používá na těch místech, kde je potřeba změny formátování.
+        </p>
+        <h4>Příklady inline elementů</h4>
+        <p>
+          <b>Bold text (tučný text)</b>, <i>italic text (kurzíva)</i>,
+          <strong>important text (důležité pojmy)</strong>,
+          <em>emphasized text (zdůrazněný text)</em>,
+          <small>smaller text (zmenšený text)</small>,
+          <mark>marked or highlighted text (označený, zvýrazněný text)</mark>,
+          <ins>inserted text (vložený text)</ins>,
+          <del>deleted text (smazaný text)</del>, dolní index: H
+          <sub>2</sub>SO<sub>4</sub>, horní index: 2<sup>10</sup> = 1024, proměnné: Einstein wrote: <var>E</var> = <var>m</var><var>c</var
             ><sup>2</sup>, klávesové zkratky: <kbd>CTRL + ALT + DEL</kbd> nebo
             odkazy na menu: <kbd>Soubor | Otevřít...</kbd>.
           </p>
@@ -395,5 +399,14 @@
         Opava 746 01
       </address>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $('.dropdown').click(function(){
+          $('.navbar ul').toggle(500);
+        })
+      })
+      
+    </script>
   </body>
 </html>
