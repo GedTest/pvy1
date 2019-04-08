@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    color: #222;
+    line-height: 120%;
+    background-color: #EDBB80;
+    counter-reset: h2;
+    
+}
+
+h1, h2, h3, h4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 0.6em 0;
+}
+
+h1 {
+    font-size: 25pt;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 20pt;
+    counter-reset: h3;
+}
+
+h2::before {
+    content: counter(h2)'. ';
+    counter-increment: h2;
+}
+
+h3 {
+    font-size: 15pt;
+}
+
+h3::before {
+    content: counter(h2)'.' counter(h3) '.';
+    counter-increment: h3;
+}
+
+p {
+    margin-top: 1em;
+    text-indent: 2em;
+}
+
+/* Layout - rozložení stránky*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#obsah {
+    background-color: #EEA044;
+}
+
+header {
+    background-image: linear-gradient(darkred, red);
+    color: white;
+    padding: 2em 0;
+    text-align: center;
+}
+
+/*Navigace*/
+.navbar {
+    background-color: #ddd;
+}
+
+.navbar ul{
+    display: flex;
+}
+/*Zobrazení pro mobily*/
+@media only screen and (max-width: 600px) {
+    .navbar ul{
+        display: block;
+    }
+  }
+
+  .navbar ul li a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border: 1px solid white;
+  }
+
+  .navbar ul li a:hover {
+    /*text-decoration: underline;*/
+    color: white;
+    background-color: black; 
+  }
+
+  .navbar .dropdown {
+      position: absolute;
+      right: 10px;
+      top: 7px;
+  }
